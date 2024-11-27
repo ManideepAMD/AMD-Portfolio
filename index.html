@@ -11,12 +11,14 @@
             padding: 0;
             background: #f4f4f9;
             color: #333;
+            overflow-x: hidden;
         }
         header {
             background: #333;
             color: #fff;
             padding: 1em 0;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         header h1 {
             margin: 0;
@@ -31,11 +33,13 @@
             padding: 2em;
             max-width: 900px;
             margin: auto;
+            animation: slideIn 1.5s ease-in-out;
         }
         section h2 {
             color: #555;
             border-bottom: 2px solid #ddd;
             padding-bottom: 0.5em;
+            margin-bottom: 1em;
         }
         .skills, .portfolio {
             display: flex;
@@ -45,11 +49,11 @@
         .skills div, .portfolio div {
             background: #fff;
             border: 1px solid #ddd;
-            border-radius: 5px;
+            border-radius: 10px;
             padding: 1em;
             flex: 1 1 calc(33% - 2em);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         .skills div:hover, .portfolio div:hover {
             transform: translateY(-5px);
@@ -57,7 +61,7 @@
         }
         .portfolio img {
             width: 100%;
-            border-radius: 5px;
+            border-radius: 10px;
             transition: transform 0.3s;
         }
         .portfolio img:hover {
@@ -65,6 +69,10 @@
         }
         .animated-section {
             animation: fadeIn 2s ease-in;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -76,6 +84,7 @@
             text-align: center;
             padding: 1em 0;
             margin-top: 2em;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
