@@ -6,7 +6,7 @@
     <title>Manideep's Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background: #f4f4f9;
@@ -49,6 +49,26 @@
             padding: 1em;
             flex: 1 1 calc(33% - 2em);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .skills div:hover, .portfolio div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .portfolio img {
+            width: 100%;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .portfolio img:hover {
+            transform: scale(1.05);
+        }
+        .animated-section {
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         footer {
             background: #333;
@@ -66,12 +86,12 @@
     <h2>A Creative Visionary for Impactful Marketing Strategies</h2>
 </header>
 
-<section>
+<section class="animated-section">
     <h2>About Me</h2>
     <p>With years of experience as an Academic Counsellor, Business Development Executive, and Associate Director for two Telugu movies, I bring a unique blend of creativity and strategy to digital marketing. My expertise spans writing, photography, videography, and directing—all honed to craft compelling stories and campaigns.</p>
 </section>
 
-<section>
+<section class="animated-section">
     <h2>Key Skills</h2>
     <div class="skills">
         <div>
@@ -101,7 +121,7 @@
     </div>
 </section>
 
-<section>
+<section class="animated-section">
     <h2>Portfolio Highlights</h2>
     <div class="portfolio">
         <div>
@@ -110,6 +130,7 @@
         </div>
         <div>
             <h3>Photography</h3>
+            <img src="your-image-path/photography.jpg" alt="Photography work">
             <p>A collection of stunning visuals over 8 years.</p>
         </div>
         <div>
@@ -119,12 +140,12 @@
     </div>
 </section>
 
-<section>
+<section class="animated-section">
     <h2>My Vision</h2>
     <p>As a digital marketer, I aim to revolutionize strategies with data-driven insights and creative storytelling, elevating brand presence and crafting unforgettable campaigns.</p>
 </section>
 
-<section>
+<section class="animated-section">
     <h2>Contact Me</h2>
     <p>Email: manideepadepua@gmail.com</p>
     <p>Mobile: 9700027326</p>
